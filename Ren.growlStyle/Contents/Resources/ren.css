@@ -1,0 +1,57 @@
+/**
+ * Ren, by Linus Lundahl
+ */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  width: 280px;
+  word-wrap: break-word;
+}
+#outer {
+  -webkit-border-radius: 3px;
+  background: #000;
+}
+#wrapper {
+  -webkit-background-clip: border;
+  -webkit-background-origin: border;
+  -webkit-border-radius: 4px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.1)), to(rgba(255,255,255,0.05)));
+  overflow: hidden;
+  padding: 10px;
+}
+#content {
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: easeOut;
+  -webkit-animation-duration: .7s;
+  -webkit-animation-name: 'textIn';
+  font: normal 8pt "Helvetica Neue";
+  color: rgba(255,255,255,.7);
+  line-height: 15px;
+  position: relative;
+}
+#icon {
+  float: left;
+  width: 32px;
+}
+#icon img {
+  float: left;
+  height: 32px;
+  width: 32px;
+}
+#text {
+  float: right;
+  width: 218px;
+}
+#text strong {
+  color: rgba(255,255,255,.99);
+  display: block;
+  letter-spacing: 0.7pt;
+}
+@-webkit-keyframes 'textIn' {
+  0%   { left: 10px; opacity: 0; }
+  100% { left: 0px; opacity: 1; }
+}
